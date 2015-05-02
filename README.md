@@ -1,5 +1,6 @@
 This workflow will control the focusatwill.com in your Google Chrome
 browser. It will not bring Chrome to the front or activate the focus@will tab.
+If focusatwill.com is not already open, it will be opened.
 
 Hotkeys are stripped on import, so you'll need to go set what you prefer.
 You may assign hotkeys for the "play/pause" and "next track" actions.

@@ -38,5 +38,14 @@ on alfred_script(q)
             
         end repeat
         
+        if seenPlayerTab is 0 then
+            set newTab to make new tab at end of tabs of window 1
+            set URL of newTab to "https://www.focusatwill.com/music/#player"
+            delay 5
+            tell newTab
+                execute javascript execCode
+            end tell
+        end if
+        
     end tell
 end alfred_script
