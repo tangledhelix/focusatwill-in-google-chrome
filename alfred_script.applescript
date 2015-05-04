@@ -4,11 +4,16 @@ on alfred_script(q)
         
         if q is "" or q is "p" or q is "pp" or q is "play" or q is "pause" then
             set buttonClass to "play"
-        end if
-        if q is "next" or q is "skip" or q is "n" then
+            set execCode to "$('." & buttonClass & "').first().click()"
+        else if q is "next" or q is "skip" or q is "n" then
             set buttonClass to "next"
+            set execCode to "$('." & buttonClass & "').first().click()"
+        else
+            set argList to every text item of q
+            if item 1 of argList is "genre" then
+                set execCode to "$('li.genre a')[" & item 2 of argList & "].click();"
+            end if
         end if
-        set execCode to "$('." & buttonClass & "').first().click()"
         
         set seenPlayerTab to 0
         
