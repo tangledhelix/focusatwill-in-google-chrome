@@ -1,5 +1,7 @@
 on alfred_script(q)
-    
+
+    set AppleScript's text item delimiters to {" "}
+
     tell application "Google Chrome"
         
         if q is "" or q is "p" or q is "pp" or q is "play" or q is "pause" then
