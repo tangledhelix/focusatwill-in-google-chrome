@@ -19,7 +19,9 @@ genre_list = {
     "Drum Zone Beta": 15,
     "Drum Zone Turbo Beta": 16,
     "Hand Drums &amp; Hums Beta": 17,
-    "Hand Drums &amp; Hums Turbo Beta": 18
+    "Hand Drums &amp; Hums Turbo Beta": 18,
+    "Kora Beta": 19,
+    "Kora Beta w/Entrainment": 20
 }
 
 p = re.compile('^.*{query}.*$', re.IGNORECASE)
