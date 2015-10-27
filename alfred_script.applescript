@@ -5,15 +5,13 @@ on alfred_script(q)
     tell application "Google Chrome"
         
         if q is "" or q is "p" or q is "pp" or q is "play" or q is "pause" then
-            set buttonClass to "play"
-            set execCode to "$('." & buttonClass & "').first().click()"
+            set execCode to "document.getElementsByClassName('play')[0].click()"
         else if q is "next" or q is "skip" or q is "n" then
-            set buttonClass to "next"
-            set execCode to "$('." & buttonClass & "').first().click()"
+            set execCode to "document.getElementsByClassName('next')[0].click()"
         else
             set argList to every text item of q
             if item 1 of argList is "genre" then
-                set execCode to "$('li.genre a')[" & item 2 of argList & "].click();"
+                set execCode to "document.querySelectorAll('li.genre a')[" & item 2 of argList & "].click();"
             end if
         end if
         
