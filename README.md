@@ -16,6 +16,12 @@ assumed.
     foc skip    - next track
     foc n       - next track
 
-Unfortunately, the new React-based player focus@will has implemented makes it
-difficult to switch genres. Without opening the genre list, the genre controls
-are not accessible. So for now, the genre selecting feature has been removed.
+You can also switch genres using the "focg" keyword. Unfortunately it does not
+seem to be possible to read data from a rendered web page into Alfred, so the
+list is fixed. If the site is updated, the list in this workflow will need
+manual updating.
+
+To change genres, use the "focg" keyword and start typing part of a genre name,
+such as "alph" for Alpha Chill, "eins" for Einstein's Genius, etc.
+
+http://www.packal.org/workflow/playpause-focuswill-google-chrome

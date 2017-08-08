@@ -1,0 +1,20 @@
+Notes on F@W browser API
+
+  window.faw object:
+    play() - Start playback
+    stop() - Stop playback
+    skip() - Skip current track
+    channel(id_or_name) - Change current channel using id or fuzzy match name, e.g. 'focusspa'
+        note: the channel IDs are static, storing a list of them in python filter is OK
+    channelList - The list of channels [{id, name}]
+    energy(energy) - Change current energy level (-1, 0, 1)
+    minutes(minutes) - Change timer to 'minutes' (0 turns off timer mode)
+    isPlaying - Boolean property, test if player is playing right now
+
+  URL Params:
+    autoplay=true - Automatically start playback
+    channel=id_or_name - Change current channel using id or fuzzy match name, e.g. 'focusspa'
+    energy=energy - Change current energy level (-1, 0, 1)
+    minutes=minutes - Change timer to 'minutes' (0 turns off timer mode)
+
+    e.g. https://www.focusatwill.com/app/music?autoplay=true&channel=uptempo&minutes=20

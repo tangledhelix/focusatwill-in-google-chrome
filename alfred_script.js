@@ -1,4 +1,3 @@
-
 function run(argv) {
 
   const appUrl = "https://www.focusatwill.com/app/music"
@@ -22,8 +21,11 @@ function run(argv) {
   }
 
   if (["p", "pp", "play", "pause"].indexOf(argv[0]) >= 0) {
-    tab.execute({ javascript: "document.querySelector('.playerControls .playButton').click();" })
+    tab.url = "javascript:if(window.faw.isPlaying){window.faw.stop()}else{window.faw.play()}"
   } else if (["n", "next", "skip"].indexOf(argv[0]) >= 0) {
-    tab.execute({ javascript: "document.querySelector('.playerControls .skipButton').click();" })
+    tab.url = "javascript:window.faw.skip()"
+  } else if (["genre"].indexOf(argv[0] >= 0)) {
+    let channelId = argv[0].split(' ')[1]
+    tab.url = `javascript:window.faw.channel(${channelId})`
   }
 }
