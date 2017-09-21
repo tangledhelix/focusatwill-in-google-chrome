@@ -2,8 +2,11 @@ import re
 import sys
 
 genre_list = {
-    "Classical": 6,
+    # "Classical": 6,
+    "Classical Plus": 503,
+    # Old name for Electro Bach
     "Einstein's Genius": 493,
+    "Electro Bach": 493,
     "Neuro Space": 483,
     "Focus Spa": 473,
     "Uptempo": 443,
@@ -26,6 +29,7 @@ genre_list = {
     "Hand Drums &amp; Hums Turbo Beta": 353,
     "Kora Beta": 363,
     "Kora Beta w/Entrainment": 373,
+    "Propeller Drone": 513,
 }
 
 p = re.compile("^.*" + sys.argv[1] + ".*$", re.IGNORECASE)
