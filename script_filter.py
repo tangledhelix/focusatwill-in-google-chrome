@@ -30,6 +30,7 @@ genre_list = {
     "Kora Beta": 363,
     "Kora Beta w/Entrainment": 373,
     "Propeller Drone": 513,
+    "Acoustical Plus": 543,
 }
 
 p = re.compile("^.*" + sys.argv[1] + ".*$", re.IGNORECASE)
